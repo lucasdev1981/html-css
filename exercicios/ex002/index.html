@@ -1,0 +1,100 @@
+<!--
+    Curso em Vídeo - Módulo 1 - Capítulo 5 - Vídeos 13/14
+    (Parágrafos e quebras de linha/Inserçao de símbolos especiais e emojis)
+
+    Propagandas
+    ---------------------------------------------------------------------------------
+
+
+    Tags utilizadas:
+    ---------------------------------------------------------------------------------
+    <h1>...</h1>
+    <p>...</p>
+    <hr>
+    <br>
+
+    Comandos do Visual Studio Code
+    ---------------------------------------------------------------------------------
+    
+
+    Curso de HTML
+    ---------------------------------------------------------------------------------
+    - Em HTML, o que importa para o fim de  um  parágrafo  não  é  a  "quantidade  de
+    <ENTER>" e sim a marca. Para mudança de linha em um texto é necessária a  criação
+    de um novo parágrafo ou então inserir a tag <br> para provocar uma quebra de  li-
+    nha. Mudanças de linha com <ENTER> e vários espaços entre as palavras sao ignora-
+    dos pelo browser.
+
+    - Não constitui uma prática adequada de programação a inserção da tag <br> várias
+    vezes seguidas para aumentar o espaço entre linhas. Para alcançar esse efeito de-
+    ve-se fazer uso de instruções CSS.
+
+
+    Tags, comandos e parâmetros
+    ---------------------------------------------------------------------------------
+    <br> ..: (break row/quebra de linha) Insere uma quebra de linha dentro de um  pa-
+    rágrafo ou título.
+
+    Inserção de caracteres especiais ..: A sintaxe a ser seguida  deve  ser  "&(C);",onde (C) corresponde ao código do símbolo a ser inserido.
+
+    Insersão de emojis ..: A sintaxe a ser seguida deve ser "&#x(C);", onde (C) é  um
+    número hexadecimal correspondente ao emoji a ser exibido.
+
+-->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            Parágrafos
+        </title>
+    </head>
+    <body>
+        <h1>
+            Parágrafos e quebras de linha
+        </h1>
+
+        <hr>
+
+        <p>
+            Você pode escrever
+            um parágrafo de
+            qualquer jeito.
+            Basta colocar tudo
+            no meio do par de tags
+            &lt;p&gt; e &lt;/p&gt;. <!-- lt: less than / gt: greater than -->
+        </p>
+
+        <p>
+            Se precisar quebrar
+            o texto em algum lugar
+            específico <br> como esse,
+            você pode usar a tag &lt;br&gt;.
+        </p>
+
+        <p>
+            Vamos adicionar alguns símbolos especiais:
+            &reg; <!-- Marca registrada -->
+            &copy; <!-- Copyright -->
+            &trade; <!-- Trademark -->
+            &euro; <!-- Euro -->
+            &pound; <!-- Libra -->
+            &yen; <!-- Yen (moeda japonesa)-->
+            &cent; <!-- Centavos americanos -->
+            &Delta; <!-- Delta maiúsculo -->
+            &uparrow; <!-- Seta para cima -->
+            &uarr; <!-- Seta para cima (abreviação) -->
+        </p>
+
+        <p>
+            Vamos adicionar alguns emojis:
+            &#x1F596;
+            &#x1F913;
+        </p>
+    </body>
+</html>

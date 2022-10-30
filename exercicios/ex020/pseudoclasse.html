@@ -1,0 +1,68 @@
+<!--
+    Uma <div>...</div> ocupa, em regra, toda a largura do <body>...</body> do navega-
+    dor. Para colocar uma <div>...</div> ao lado de outra, uma das formas é  alteran-
+    do a propriedade "display" para "inline-block"
+-->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Pseudo classes</title>
+
+        <style>
+            div {
+                /* Alterando a cor de fundo                                        */
+                background-color: lightgray;
+
+                /* Alterando o alinhamento horizontal do texto contido  no  compo- */
+                /* nente para o centro.                                            */
+                text-align: center;
+
+                /* Alterando a altura do componente.                               */
+                height: 200px;
+
+                /* Alterando a largura do componete.                               */
+                width: 200px;
+
+                /* Alterando a borda do componente através da shorthand da propri- */
+                /* edade border [largura] [tipo] [cor]                             */
+                border: 1px solid black;
+
+                /* Alterando a forma de disposição do elemente para poder  posici- */
+                /* ná-los lado-a-lado (inline-block)                               */
+                display: inline-block;
+            }
+
+            /* Pseudo-classes (:) podem estar relacionadas a um elemento ou a  uma */
+            /* classe. As pseudo-classes são relacionadas ao estado de um determi- */
+            /* nado elemento/classe. Por exemplo: ativo, marcado, vazio, habilita- */
+            /* do. (hover, pseudo-classe que indica quando o mouse  está  passando */
+            /* por cima do elemento/classe). Pseudo-classes server para  se  fazer */
+            /* configurações de estado (com o mouse por cima, por exemplo). */
+            div:hover {
+                /* div:hover significa uma div que está com o  ponteiro  do  mouse */
+                /* passando por cima dela */
+                background-color: yellow;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id = "d1">
+            01
+        </div>
+
+        <div id = "d2">
+            02
+        </div>
+
+        <div id = "d3">
+            03
+        </div>
+    </body>
+</html>

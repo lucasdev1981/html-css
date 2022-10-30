@@ -1,0 +1,81 @@
+<!--
+    Curso em Vídeo - Módulo 1 - Capítulo 10 - Vídeos 27
+    (Links)
+
+    Propagandas
+    ---------------------------------------------------------------------------------
+
+
+    Tags utilizadas:
+    ---------------------------------------------------------------------------------
+    <a href="" target="" rel""></a>
+
+    <h1>...</h1>
+
+    <h2>...</h2>
+
+    <ol>...</ol>
+        Parâmetro type="" (opcional): determina o tipo de numeração podendo  ser  "1"
+        (números normais), "A" (letras maiúsculas), "a" (letras minúsculas), "I" (nú-
+        meros romanos maiúsculos) ou "i" (números romanos minúsculos)
+        
+        Parâmetro start="" (opcional): determina o valor de início da lista. Deve ser
+        sempre um número natural independente do parâmetro type. Por exemplo, para i-
+        niciar em "f", utilize o número "6" (sexta letra do alfabeto que  corresponde
+        à letra "f")
+
+    <ul>...</ul>
+        Parâmetro type=" (opcional): determina o tipo de marcador que será utilizado,
+        podendo ser "disc" (valor padrão),  "circle"  (bolinha  aberta)  ou  "square"
+        (quadradinho).
+
+    <li>...</li>
+        Observação: A partir do HTML5, o </li> se tornou opcional.
+    
+    <dl>...</dl> = Lista de definição (tipo um dicionário)
+        <dt>...</dt> = Termo que será explicado
+        <dd>...</dd> = Explicação sobre o termo
+
+    Comandos do Visual Studio Code
+    ---------------------------------------------------------------------------------
+
+
+    Curso de HTML
+    ---------------------------------------------------------------------------------
+    
+
+    Tags, comandos e parâmetros
+    ---------------------------------------------------------------------------------
+    
+
+-->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io\" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <p>Você também pode acessar o meu <a href="http://youtube.com/cursoemvideo/" target="_blank" rel="external">Canal gratuito no YouTube</a></p>
+    
+    <h1>Usando links internos</h1>
+    <p>Esta é a primeira página do site. Se você quiser também pode acessar a minha <a href="pag002.html" target="_self" rel="next">segunda página</a></p>
+
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self" rel="next">página de notícias</a>.</p>
+
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/10 - Ligações em toda parte.pdf" download="Livro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/10 - Ligações em toda parte.rar">Livro compactado em RAR</a></li>
+    </ul>
+</body>
+</html>

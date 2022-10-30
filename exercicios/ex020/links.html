@@ -1,0 +1,159 @@
+<!-- - Pseudo-elementos: podem agir nos elementos, nas classes e nos  identifica- -->
+<!-- dores. Acrescentam elementos no conteúdo periférico dos elementos. É identi- -->
+<!-- ficado pela ocorrência de :: (duas vezes dois pontos).                       -->
+<!-- Seletores personalizados                                                     -->
+<!-- Simbologia: #  corresponde a um id                                           -->
+<!--             .  corresponde a uma class                                       -->
+<!--             :  corresponde a uma pseudo-class                                -->
+<!--             :: corresponde a um pseudo-element                               -->
+<!--             >  corresponde a uma relação de herança (child)                  -->
+<!--             Elemento HTML apresentado sem nenhum símbolo define uma configu- -->
+<!--                ração geral desse elemento, (sem seleção de um em especial).  -->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Links</title>
+
+        <style>
+            /* Seletor para alteração de configurações do <body>                   */
+            body {
+                /* Altera o tipo de fonte do <body> refletindo nos  elementos  que */
+                /* estão contidos nele (herança). */
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* Seletor para alteração das características dos links da página. Vi- */
+            /* sitados ou não visitados. */
+            a {
+                /* Altera a cor dos links (tag <a> para vermelho).  A  propriedade */
+                /* color altera a cor da fonte de um elemento. */
+                color: red;
+
+                /* A propriedade text-decoration altera o tipo  de  sublinhado  do */
+                /* texto do elemento. A configuração abaixo remove o sublinhado.   */
+                text-decoration: none;
+
+                /* A propriedade font-weight refere-se a  espessura  da  fonte  do */
+                /* compotente. */
+                font-weight: bold;
+            }
+
+            /* Definição de uma classe.                                            */
+            .especial {
+                /* Cor de fundo vermelha.                                          */
+                background-color: red;
+            }
+
+            /* Definição de uma pseudo-classe para ajuste da cor da fonte. (WLC)   */
+            .especial:visited {
+                /* Cor da fonte para links especiais visitados fica branca. (WLC)  */
+                color: white;
+            }
+
+            /* Definição de pseudo-classe para ajuste da cor  da  fonte  quando  o */
+            /* ponteiro do mouse estiver sobre ela. (WLC)                          */
+            .especial:hover {
+                /* Cor da fonte nesta pseudo-classe será preta.                    */
+                color: black;
+            }
+
+            /* Configuração do pseudo elemento ::after, que acrescenta algum  con- */
+            /* údo exibido após o elemento que está sendo configurado.             */
+            .especial::after {
+                /* Define o conteúdo (pseudo-elemento) a ser acrescentado.         */
+                content: ' ⇐';
+
+                /* Removendo o sublinhado do conteúdo (pseudo-elemento) acrescido. */
+                text-decoration: none;
+
+                /* Define o "peso" da fonte do pseudo-elemento (normal/negrito)    */
+                font-weight: normal;
+
+                /* Define a cor da fonte do pseudo-elemento.                       */
+                color: darkgray;
+            }
+
+            .especial::before {
+                /* Define o conteúdo (pseudo-elemento) a ser acrescentado.         */
+                content: '⇒ ';
+
+                /* Removendo o sublinhado do conteúdo (pseudo-elemento) acrescido. */
+                text-decoration: none;
+
+                /* Define o "peso" da fonte do pseudo-elemento (normal/negrito)    */
+                font-weight: normal;
+
+                /* Define a cor da fonte do pseudo-elemento.                       */
+                color: darkgray;
+            }
+
+            /* Configuração dos links visitados (pseudo-classe :visited).          */
+            a:visited {
+                /* Altera a cor da fonte.                                          */
+                color: darkred;
+            }
+
+            /* Pseudo-classe que é ativada com a passagem do ponteiro do mouse so- */
+            /* bre o componente.                                                   */
+            a:hover {
+                /* Sublinha o texto quando o mouse é passado sobre o componente.   */
+                text-decoration: underline;
+
+                /* Muda a cor da fonte para preta quando o  ponteiro  do  mouse  é */
+                /* passado sobre o componente. */
+                color: black;
+            }
+
+            /* A pseudo-classe :active é acionada enquanto o botão do mouse perma- */
+            /* nece pressionado sobre o componente. */
+            a:active {
+                /* Deixa a fonte do texto do link amarela enquanto o botão do mou- */
+                /* se permanece pressionado sobre o componente.                    */
+                color: yellow;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Título de nível 1                                                    -->
+        <h1>Personalizando links</h1>
+
+        <!-- Lista não ordenada (com marcadores)                                  -->
+        <ul>
+            <!-- Item de lista contendo link                                      -->
+            <li>
+                <a href = "https://gustavoguanabara.github.io/"
+                   target = "_blank"
+                   rel = "external">
+                   Repositório GitHub
+                </a>
+            </li>
+
+            <!-- Item de lista contendo link                                      -->
+            <li>
+                <a href = "https://youtube.com/cursoemvideo/"
+                   target = "_blank"
+                   rel = "external"
+                   class = "especial">
+                   Canal do YouTube
+                </a>
+            </li>
+
+            <!-- Item de lista contendo link                                      -->
+            <li>
+                <a href = "https://www.cursoemvideo.com/"
+                   target = "_blank"
+                   rel = "external"
+                   class = "especial">
+                   Site do Cursoemvideo
+                </a>
+            </li>
+        </ul>
+    </body>
+</html>

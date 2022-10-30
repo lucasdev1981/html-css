@@ -1,0 +1,83 @@
+<!--
+    - hover é uma pseudo-classe que significa que o ponteiro do mouse está sobre  de-
+    terminado componente.
+
+    - Seletores (componentes a serem estilizados), Identificadores (id / #),  Classes
+    (class / .), Pseudo-classes (:), Pseudo-elementos (::) e Elementos-filhos (Heran-
+    ça ( > )) são definidos dentro do CSS (bloco <style>...</style> ou CSS externas).
+-->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Exemplo de hover</title>
+
+        <!-- Criação de CSS interna/local                                         -->
+        <style>
+            /* Criação de seletor para configuração de estilo.                     */
+            body {
+                /* Configurando o tipo de fonte a ser utilizada  pelo  <body>  que */
+                /* reflete em seus componentes internos caso não sejam  configura- */
+                /* dos de outra forma. */
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* Criação de pseudo-classe (mouse passando sobre o componente)        */
+            div:hover{
+                /* Ao passar o mouse sobre o componente <div> este mudará a cor da */
+                /* fonte para vermelha.                                            */
+                color: red;
+            }
+
+            /* Alterando estilo dos parágrafos-filhos da div (que estão dentro  da */
+            /* div. */
+            div > p {
+                /* Alterando a propriedade display para não exibir o elemento.     */
+                display: none;
+            }
+
+            /* É possível criar pseudo-classes também para os elementos filhos.  A */
+            /* pseudo-classe abaixo faz com que o parágrafo-filho da div se  torne */
+            /* visível ao se passar o mouse sobre tal elemento.                    */
+            div:hover > p {
+                /* Faz com que o parágrafo se torne visível.                       */
+                display: block;
+
+                /* Altera a cor da fonte do parágrafo para branca.                 */
+                color: white;
+
+                /* Altera a cor de fundo do parágrafo para vermelha.               */
+                background-color: red;
+
+                /* Define a largura da div para 300 pixels,  diferente  do  padrão */
+                /* que seria a largura total do <body>                             */
+                width: 300px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Título de nível 1                                                    -->
+        <h1>Exemplo de hover</h1>
+
+        <!-- Parágrafo                                                            -->
+        <p>Passe o mouse sobre o texto abaixo.</p>
+
+        <!-- Bloco não semântico                                                  -->
+        <div>
+            Passe o mouse aqui.
+
+            <!-- Parágrafo configurado para aparecer quando a pseudo-classe hover -->
+            <!-- da <div> for acionada.                                           -->
+            <p>TEXTO ESCONDIDO...</p>
+        </div>
+
+        <!-- Parágrafo                                                            -->
+        <p>Fim do exemplo.</p>
+    </body>
+</html>

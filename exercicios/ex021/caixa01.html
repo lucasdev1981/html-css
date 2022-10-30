@@ -1,0 +1,148 @@
+<!-- Aninhamento e tipos de caixas (block-level e inline-level); Anatomia.        -->
+<!-- Esta aula teve bastante uso da ferramenta DevTools do Chrome para visualizar -->
+<!-- as propriedades inerentes à disposição, bordas e outras características  vi- -->
+<!-- suais dos elementos HTML. O DevTools pode ser aberto clicando-se com o botão -->
+<!-- direito do mouse e escolhendo-se a opção "Inspecionar" que aparecerá no menu -->
+<!-- suspenso; clicando-se no ⁝, depois em "Mais ferramentas" e depois em "Ferra- -->
+<!-- mentas do desenvolvedor"; ou através do atalho <CTRL> +  <SHIFT>  +  "I".  O -->
+<!-- Console (prompt de comando) que aparece na parte inferior pode ser aberto ou -->
+<!-- fechado pressionando-se a tecla <ESC>. No painel de estilos, quando selecio- -->
+<!-- nado um componente aparece uma configuração padrão que é  criada  pelo "user -->
+<!-- agent stylesheet" (configurações automáticas feitas pelo navegador). Para  o -->
+<!-- <h1>, por exemplo, o style "display: block;", indica que este elemento é  do -->
+<!-- tipo block-level (esta propriedade pode ser mudada). Ao passar o mouse sobre -->
+<!-- a caixa-modelo do componente suas propriedades são  exibidas  no  navegador, -->
+<!-- mostrando como é o comportamento de cada uma delas  mostrando  incluside  na -->
+<!-- figura o valor que está atribuído a cada uma delas (height e width, padding, -->
+<!-- border e  margin).  Qualquer  propriedade  pode  ser  alteradas  através  do -->
+<!-- DevTools para fazer testes sem que o código  original  seja  afetado;  basta -->
+<!-- clicar sobre o valor da propriedade desejada e substituí-lo por  outro,  ou, -->
+<!-- alguns casos modificar através do botão de rolagem do mouse,  aumentando  ou -->
+<!-- diminuindo seu valor. Essas configurações ainda podem ser "desligadas"  des- -->
+<!-- desmarcando a caixa lateral da propriedade.                                  -->
+<!-- REFORÇANDO: As características "block-level" e "inline-level" podem ser  al- -->
+<!-- teradas pela propriedade "display"                                           -->
+<!-- display: block; (block-level)                                                -->
+<!-- display: inline;-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modelo de Caixas</title>
+        <style>
+            /* o Elemento <h1> é uma caixa do tipo  block-level.  Vejamos  algumas */
+            /* configurações de exibição desse elemento. */
+            h1 {
+                /* Mudando a cor para melhorar a visualização.                     */
+                background-color: lightgray;
+
+                /* Altura e largura (parte mais interna/rente ao  componente.  Nos */
+                /* componentes block-level, por padrão a altura é a altura o  con- */
+                /* údo do compotente e a largura é a largura total  do  <body>  do */
+                /* navegador, mas essas propriedades podem ser alteradas.          */
+                /* "box-sizing"                                                    */
+                height: 300px;
+                width: 300px;
+
+                /* Alterando as propriedades da borda (largura, estilo  e  cor).   */
+                /*
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: darkslategray;
+
+                    Utilizando shorthands para simplificação deste código.
+                    border: [espessura] [tipo] [cor]
+                */
+                border: 10px solid darkslategray;
+
+                /* Configurando o padding, que é uma medida de afastamento do con- */
+                /* teúdo do elemento, da margem para dentro.                       */
+                /*
+                    padding-top: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+
+                    Utilizando shorthands para simplificação deste código.
+                    padding: [cima] [direita] [baixo] [esquerda]
+
+                    Quando as quatro medidas forem iguais, basta informar  uma  única
+                    vez.
+                    padding: [medida]
+
+                    Quando se usa duas medidas como parâmetro, a primeira corresponde
+                    às horizontais e a segunda corresponde às verticais.
+                    padding: [horizontais] [verticais]
+                */
+                padding: 10px 20px;
+
+                /* Configurando a margem (propriedade margin, que é medida da bor- */
+                /* da para fora do elemento.                                       */
+                /*
+                    margin-top: 20px;
+                    margin-right: 20px;
+                    margin-bottom: 40px;
+                    margin-left: 20px;
+
+                    Utilizando shorthands para simplificação deste código.
+                    margin: [cima] [direita] [baixo] [esquerda]
+
+                    Para centralizar o componente horizontalmente, basta usar  "auto"
+                    nos parâmetros [direita] e [esquerda].
+                */
+                margin: 20px auto 40px auto;
+
+                /* Para centralizar um  componente  deve-se  usar  a  configuração */
+                /* margin: auto;*/
+
+                /* Configurando o "outline" (medida que fica entre  a  borda  e  a */
+                /* margem, porém dentro da margem.                                 */
+                /*
+                    outline-width: 5px;
+                    outline-style: dashed;
+                    outline-color: salmon;
+
+                    Utilizando shorthands para simplificação deste código.
+                    outline: [espessura] [estilo] [cor]
+                */
+                outline: 5px dashed salmon;
+            }
+
+            /* Alterando configurações de estilo das âncoras/links.                */
+            a {
+                /* Alterando as propriedades da borda (largura, estilo e cor).     */
+                /*
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: red;
+                */
+                /* Configuração simplificada (shorthand).                          */
+                border: 10px solid red;
+
+                /* Acrescentado um padding.                                        */
+                /*
+                    padding-top: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                */
+                /* Configuração simplificada (shorthand)                           */
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Títulos <h1> a <h6> são elementos block-level. -->
+        <h1>Exemplo de caixa box-level</h1>
+        
+        <!-- Parágrafos <p> são elementos block-level. -->
+        <!-- Âncoras/links <a> são elementos inline-level. -->
+        <p>
+            Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.
+        </p>
+    </body>
+</html>
