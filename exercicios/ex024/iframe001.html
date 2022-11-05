@@ -1,12 +1,39 @@
 <!--
     Módulo 4 - Vídeo 02 - Capítulo 22 - iframes
-    -------------------------------------------
+    ---------------------------------------------------------------------------------
 
-    1)  O tamanho padrão de um iframe é de 300px por 150px.
-    2)  Caso haja configurações de propriedades nos parâmetros do iframe e das mesmas
-        propriedades através de CSS, prevalecerá a configuração contida na CSS.
-    3)  Os <iframes> (inline frames, em tradução livre quadro em linha,  por  Gustavo
+    01) Carrega um site dentro de um quadro. Abre uma  nova  instância  do  navegador
+        dentro do próprio site, ao invés de abri-lo em uma nova aba/janela.
+
+    02) O tamanho padrão de um iframe é de 300px por 150px.
+
+    03) Caso haja configurações de propriedades nos parâmetros do iframe e  das  mes-
+        mas propriedades através de CSS, prevalecerá a configuração contida nas CSS.
+
+    04) Os <iframes> (inline frames, em tradução livre "quadro em linha", por Gustavo
         Guanabara).
+
+    05) Originalmente os <iframes> têm "display: inline;".
+    
+    06) Originalmente a cor de fundo de um <iframe> é transparente.
+    
+    07) Alguns sites não aceitam ser colocados dentro de <iframes>. Possuem uma  pro-
+        teção para não serem colocados dentro de sites de terceiros
+
+
+    Exercício 024 - Estudos de iframes
+    ---------------------------------------------------------------------------------
+    Tags utilizadas
+    <h1>...</h1>
+    <a>...</a>
+
+    <iframe>...</iframe>
+        1)  scr = "": Define a origem (source) que será aberta  dentro  do  <iframe>.
+            Pode ser um site externo ou mesmo um site hospedado na própria pasta.
+            
+        2) frameborder = "": Define a borda a ser usada pelo componente.
+            "0": sem borda.
+            "1": com borda.
 -->
 
 <!DOCTYPE html>
@@ -19,9 +46,26 @@
         <title>Estudos de iframe</title>
     </head>
     <body>
+        <!--
+            Título de nível 1
+        -->
         <h1>Testanto o uso de um iframe</h1>
+
+        <!--
+            Parágrafo
+        -->
         <p>
-            Acessando o site do Curso em Vídeo para aprender a programar.
+            Acessando o site do 
+            
+            <!--
+                Quadro em linha/site (iframe) colocado dentro de um parágrafo.
+            -->
+            <iframe
+                src = "https://www.cursoemvideo.com/"
+                frameborder = "0">
+            </iframe>
+
+            para aprender a programar.
         </p>
     </body>
 </html>
