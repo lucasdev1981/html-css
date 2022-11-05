@@ -1,38 +1,139 @@
+<!--
+    Módulo 4 - Vídeos 04 - Capítulo 22 - iframes
+    ---------------------------------------------------------------------------------
+
+    01) Carrega um site dentro de um quadro. Abre uma  nova  instância  do  navegador
+        dentro do próprio site, ao invés de abri-lo em uma nova aba/janela.
+
+    02) O tamanho padrão de um iframe é de 300px por 150px, mas a largura e a  altura
+        podem ser configuradas.
+
+    03) Caso haja configurações de propriedades nos parâmetros do iframe e  das  mes-
+        mas propriedades através de CSS, prevalecerá a configuração contida nas CSS.
+
+    04) Os <iframes> (inline frames, em tradução livre "quadro em linha", por Gustavo
+        Guanabara).
+
+    05) Originalmente os <iframes> têm "display: inline;".
+    
+    06) Originalmente a cor de fundo de um <iframe> é transparente.
+    
+    07) Alguns sites não aceitam ser colocados dentro de <iframes>. Possuem uma  pro-
+        teção para não serem colocados dentro de sites de terceiros.
+    
+    08) Nem todos os navegadores de celular tem suporte aos <iframe>.
+
+
+    Exercício 024 - Estudos de iframes
+    ---------------------------------------------------------------------------------
+    
+    Tags utilizadas
+    ---------------------------------------------------------------------------------
+    <h1>...</h1>
+        Cria um título de primeiro nível no documento.
+
+    <a>...</a>
+        Cria um link (externo ou local).
+
+        01) href = ""
+
+        02) target = ""
+            "_blank": abre o link em uma nova aba.
+            "_parent":
+            "_self": abre o link sobrepondo o site que está aberto (na mesma aba).
+            "_top":
+
+        03) rel = ""
+            "external": indica que o link que está sendo aberto é  externo  (pertence
+                a um terceiro.
+            "next": indique que o link que será aberto é a próxima página do  próprio
+                site.
+            "prev": indica que ao clicar no link o site retornará à página pela  qual
+                o link foi aberto.
+
+        Conteúdo:
+            O texto que se transformará em link.
+
+    <iframe>...</iframe>
+        Coloca um conteúdo externo ou mesmo local (site) dentro de um quadro contrido
+        no seu site.
+
+        01) scr = "": Define a origem (source) que será aberta  dentro  do  <iframe>.
+            Pode ser um site externo ou mesmo um site hospedado na própria pasta.
+            
+        02) frameborder = "": Define a borda a ser usada pelo componente.
+            "0": sem borda.
+            "1": com borda.
+        
+        03) height = "": Define a altura do componente <iframe>.
+
+        04) width = "": Define a largura do componente <iframe>.
+
+        05) scrolling = "": Configura as barras de rolagem do <iframe>.
+            "auto": Se o conteúdo exceder o tamanho do quadro ele cria a barra de ro-
+                lagem.
+            "yes": A barra de rolagem sempre aparecerá, independentemente do  tamanho
+                do quadro.
+            "no": Não exibe a barra de rolagem em nenhuma hipótese.
+
+        Conteúdo:
+        A informação que for colocada como conteúdo do <iframe> será exibida caso não
+            seja possível a exibição do conteúdo solicitado no parâmetro  'scr = ""'.
+            Como forma alternativa para acesso do conteúdo pode-se usar um link.
+    
+    <p>...</p>
+        Cria um parágrafo no documento.
+    
+    lorem
+        Gera um texto aleatório, em latim, para servir de teste de layout  durante  a
+            criação de um site
+    
+    <br>
+        Insere uma quebra de linha (break row).
+-->
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iframe</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
 
-        iframe {
-            display: block;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>Teste com iframe</h1>
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, ipsam iure? Ipsam maiores doloremque optio omnis distinctio? Ab earum, modi perferendis molestiae possimus exercitationem tenetur iusto, quis, beatae eum asperiores. <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem similique sit pariatur odio dolorum hic, dolor aliquam voluptatem accusamus recusandae rem in minima nobis voluptas corrupti, dicta, aperiam labore sint?
-    </p>
+<html lang = "pt-br">
 
-    <iframe
-        src = "../ex023/tabela006.html"
-        frameborder = "0"
-        height = "500px"
-        width = "500px">
-    </iframe>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas suscipit maiores tempora doloribus. Ea cupiditate, libero dolorum ipsam aspernatur id minima culpa asperiores quam numquam obcaecati nostrum quod quae dignissimos. <br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, expedita. Impedit natus sint pariatur itaque earum a illo cupiditate fugit, vitae culpa quidem excepturi quo vel voluptatibus similique architecto et.
-    </p>
-</body>
+        <title>iframe</title>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            iframe {
+                width: 300px;
+                display: block;
+                margin: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Teste com iframe</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam sed nam unde quos eum placeat, nesciunt, expedita ut enim aperiam hic earum iure. Officiis quaerat eaque numquam rem repellat.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis impedit eum maiores ullam, quis facilis tempora alias nulla aut veniam maxime repudiandae quia, corrupti qui magni. Earum beatae voluptatibus rem?
+        </p>
+
+        <iframe
+            src = "pagina001.html"
+            frameborder = "0"
+            height = "500px"
+            width = "500px">
+        </iframe>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iste eveniet suscipit repellat cumque hic perferendis itaque ipsam, libero facilis quasi dolores culpa, ad quam dignissimos est perspiciatis mollitia illo!
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vel quaerat facilis eligendi, quis esse fuga iste architecto sapiente iure veniam sequi neque quas quo dignissimos, rem vero quos dolor.
+        </p>
+    </body>
 </html>
