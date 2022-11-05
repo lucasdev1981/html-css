@@ -1,5 +1,5 @@
 <!--
-    Módulo 4 - Vídeos 04 - Capítulo 22 - iframes
+    Módulo 4 - Vídeos 05 - Capítulo 22 - iframes
     ---------------------------------------------------------------------------------
 
     01) Carrega um site dentro de um quadro. Abre uma  nova  instância  do  navegador
@@ -90,61 +90,94 @@
     
     <br>
         Insere uma quebra de linha (break row).
+
+    <ul>...</ul>
+        Unordered list (Lista não ordenada), ou lista com marcadores
+
+        Conteúdo:
+        Tags <li>...</li>: Itens de lista que podem conter outras tags como  <img>  e
+            <a>.
 -->
 <!DOCTYPE html>
 
 <html lang = "pt-br">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>iframe</title>
-        <!--
-            Configurações de CSS (tag <style>)
-        -->
+        <title>Uso de iframe</title>
         <style>
             /*
-                Seletor para as configurações do corpo do documento.
+                Seletor para configuração do corpo principal do documento.
             */
             body {
+                /*
+                    Configuração da fonte usando "safe combination".
+                */
                 font-family: Arial, Helvetica, sans-serif;
             }
 
-            /*
-                Seletor para as configurações dos elementos <iframe>.
-            */
-            iframe {
-                width: 300px;
-                display: block;
-                margin: auto;
+            iframe#tela {
+                /*
+                    Configura a largura relativa a largura da ViewPort (95%).
+                */
+                width: 95vw;
+                border: 2px solid black;
+                height: 400px;
             }
         </style>
     </head>
-
     <body>
-        <h1>Teste com iframe</h1>
+        <h1>Faça uma escolha</h1>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam sed nam unde quos eum placeat, nesciunt, expedita ut enim aperiam hic earum iure. Officiis quaerat eaque numquam rem repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur eius blanditiis quam tenetur similique nobis nulla dolorum illo eligendi. Nesciunt reiciendis officiis molestiae nemo placeat, culpa cumque ex. Molestiae.
+        </p>
+
+        <ul>
+            <li>
+                <a
+                    href = "paginas-extras/pagina001.html"
+                    target = "frame">
+                    Primeira página
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href = "paginas-extras/pagina002.html"
+                    target = "frame">
+                    Segunda página
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href = "paginas-extras/pagina003.html"
+                    target = "frame">
+                    Terceira párina
+                </a>
+            </li>
+        </ul>
+
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, vitae. Maiores optio ex tempora sint, fuga dolorem quisquam magnam quibusdam? Possimus qui delectus blanditiis harum error vero dignissimos? Perferendis, autem.
             <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis impedit eum maiores ullam, quis facilis tempora alias nulla aut veniam maxime repudiandae quia, corrupti qui magni. Earum beatae voluptatibus rem?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit debitis repudiandae optio ut quis iste temporibus saepe ipsa doloremque, vel molestias eum blanditiis repellendus totam? A soluta eligendi magnam veniam.
         </p>
 
         <iframe
-            src = "paginas-extras/pagina001.html"
-            frameborder = "0"
-            height = "500px"
-            width = "500px">
+            id = "tela"
+            name = "frame"
+            src = "">
             <p>
-                Infelizmente seu navegador não é compatível com conteúdos externos.
+                Infelizmente seu navegador não é compatível com isso.
             </p>
         </iframe>
 
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iste eveniet suscipit repellat cumque hic perferendis itaque ipsam, libero facilis quasi dolores culpa, ad quam dignissimos est perspiciatis mollitia illo!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illo fuga doloremque fugit? Nulla error, numquam culpa qui quam doloribus inventore deleniti sapiente, voluptates beatae assumenda delectus, recusandae eveniet amet.
             <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vel quaerat facilis eligendi, quis esse fuga iste architecto sapiente iure veniam sequi neque quas quo dignissimos, rem vero quos dolor.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit id accusantium neque fuga veritatis saepe ab et! Quaerat molestiae quidem iure quae hic aliquam quo quasi fugit porro nisi!
         </p>
     </body>
 </html>
