@@ -1,5 +1,5 @@
 <!--
-    Módulo 4 - Vídeos 05 - Capítulo 22 - iframes
+    Módulo 4 - Vídeos 05, 06, 07 - Capítulo 22 - iframes
     ---------------------------------------------------------------------------------
 
     01) Carrega um site dentro de um quadro. Abre uma  nova  instância  do  navegador
@@ -75,6 +75,8 @@
             "yes": A barra de rolagem sempre aparecerá, independentemente do  tamanho
                 do quadro.
             "no": Não exibe a barra de rolagem em nenhuma hipótese.
+
+        06) scrdoc = "": Possibilita a inserção de código HTML.
 
         Conteúdo:
         A informação que for colocada como conteúdo do <iframe> será exibida caso não
@@ -168,11 +170,15 @@
         <iframe
             id = "tela"
             name = "frame"
-            src = "">
-            <p>
+            srcdoc = "<h1>Escolha uma das opções acima</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perspiciatis repellendus rerum nam placeat minima expedita aspernatur, fugiat ad? Quae, quo ab adipisci sed id repellendus possimus soluta natus veniam?
+                      </p>
+                      <img src = 'imagens/logo-html.png' width = '150px'>">
                 Infelizmente seu navegador não é compatível com isso.
             </p>
         </iframe>
+        
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illo fuga doloremque fugit? Nulla error, numquam culpa qui quam doloribus inventore deleniti sapiente, voluptates beatae assumenda delectus, recusandae eveniet amet.
