@@ -1,0 +1,141 @@
+<!--
+    Módulo 4 - Vídeos 05, 06, 07, 08, 09 - Capítulo 22 - iframes
+    ---------------------------------------------------------------------------------
+
+    01) Carrega um site dentro de um quadro. Abre uma  nova  instância  do  navegador
+        dentro do próprio site, ao invés de abri-lo em uma nova aba/janela.
+
+    02) O tamanho padrão de um iframe é de 300px por 150px, mas a largura e a  altura
+        podem ser configuradas.
+
+    03) Caso haja configurações de propriedades nos parâmetros do iframe e  das  mes-
+        mas propriedades através de CSS, prevalecerá a configuração contida nas CSS.
+
+    04) Os <iframes> (inline frames, em tradução livre "quadro em linha", por Gustavo
+        Guanabara).
+
+    05) Originalmente os <iframes> têm "display: inline;".
+    
+    06) Originalmente a cor de fundo de um <iframe> é transparente.
+    
+    07) Alguns sites não aceitam ser colocados dentro de <iframes>. Possuem uma  pro-
+        teção para não serem colocados dentro de sites de terceiros.
+    
+    08) Nem todos os navegadores de celular tem suporte aos <iframe>.
+
+
+    Exercício 024 - Estudos de iframes
+    ---------------------------------------------------------------------------------
+    
+    Tags utilizadas
+    ---------------------------------------------------------------------------------
+    <h1>...</h1>
+        Cria um título de primeiro nível no documento.
+
+    <a>...</a>
+        Cria um link (externo ou local).
+
+        01) href = ""
+
+        02) target = ""
+            "_blank": abre o link em uma nova aba.
+            "_parent":
+            "_self": abre o link sobrepondo o site que está aberto (na mesma aba).
+            "_top":
+
+        03) rel = ""
+            "external": indica que o link que está sendo aberto é  externo  (pertence
+                a um terceiro.
+            "next": indique que o link que será aberto é a próxima página do  próprio
+                site.
+            "prev": indica que ao clicar no link o site retornará à página pela  qual
+                o link foi aberto.
+
+        Conteúdo:
+            O texto que se transformará em link.
+
+    <iframe>...</iframe>
+        Coloca um conteúdo externo ou mesmo local (site) dentro de um quadro contrido
+        no seu site.
+
+        01) scr = "": Define a origem (source) que será aberta  dentro  do  <iframe>.
+            Pode ser um site externo ou mesmo um site hospedado na própria pasta.
+            
+        02) frameborder = "": Define a borda a ser usada pelo componente.
+            "0": sem borda.
+            "1": com borda.
+        
+        03) height = "": Define a altura do componente <iframe>.
+
+        04) width = "": Define a largura do componente <iframe>.
+
+        05) scrolling = "": Configura as barras de rolagem do <iframe>.
+            "auto": Se o conteúdo exceder o tamanho do quadro ele cria a barra de ro-
+                lagem.
+            "yes": A barra de rolagem sempre aparecerá, independentemente do  tamanho
+                do quadro.
+            "no": Não exibe a barra de rolagem em nenhuma hipótese.
+
+        06) scrdoc = "": Possibilita a inserção de código HTML.
+
+        07) sandbox: Controla o acesso a dados do <iframe>.
+            "sandbox": Bloqueia o acesso de terceiros a dados do <iframe>.
+            "allow-same-origin": Permite a execução de conteúdos de mesma origem.
+            "allow-forms": Permite que o <iframe> execute formulários.
+            "allow-scripts": Permite a execução de scripts.
+
+        08) referrerpolicy = "no-referrer": Impede a captura de  qualquer  informação
+            do usuário.
+
+        Conteúdo:
+        A informação que for colocada como conteúdo do <iframe> será exibida caso não
+            seja possível a exibição do conteúdo solicitado no parâmetro  'scr = ""'.
+            Como forma alternativa para acesso do conteúdo pode-se usar um link.
+    
+    <p>...</p>
+        Cria um parágrafo no documento.
+    
+    lorem
+        Gera um texto aleatório, em latim, para servir de teste de layout  durante  a
+            criação de um site
+    
+    <br>
+        Insere uma quebra de linha (break row).
+
+    <ul>...</ul>
+        Unordered list (Lista não ordenada), ou lista com marcadores
+
+        Conteúdo:
+        Tags <li>...</li>: Itens de lista que podem conter outras tags como  <img>  e
+            <a>.
+-->
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+        
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adicionando conteúdos</title>
+    </head>
+    <body>
+        <h1>Conteúdos dentro de iframes</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quos doloribus explicabo impedit dolorem repellendus consequuntur dolores, ducimus architecto ut molestias eaque tempora error culpa! Dicta fugiat cupiditate eaque? Inventore.
+        </p>
+
+        <h2>Vídeos</h2>
+        <div style="padding:42.19% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/747605362?h=5dc458ab4d&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <p><a href="https://vimeo.com/747605362">Indonesia. Volcanoes and Rainforests FPV exploration</a> from <a href="https://vimeo.com/timelabpro">Timelab Pro</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+        <h2>Mapas do Google</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14746.360118257258!2d-48.571732980348365!3d-22.482035422493773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c74f7df88c1d37%3A0x43973ebbc2e44cf7!2sBarra%20Bonita%2C%20SP%2C%2017340-000!5e0!3m2!1spt-BR!2sbr!4v1667654780924!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <h2>Mapas do Waze</h2>
+        <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-22.479431&lon=-48.568770&ct=livemap" width="600" height="450" allowfullscreen></iframe>
+
+        <h2>Google Documents</h2>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS0zXqPswKaWKTMOYQaR_ZC4YMVIAO6wRgvK5qv2QAGwI9XrqEJUxmYH9wREe300Q/pub?embedded=true" width="600px"></iframe>
+    </body>
+</html>
